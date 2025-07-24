@@ -34,7 +34,7 @@ public class DataLiftDown : ControllerBase
                 return Ok();
             case "SendCardInfo.csv":
                 _logger.LogInformation($"Received filename: {filename}, StatusCode: 200, ExitCode: 999");
-                Response.Headers.Append("ExitCode", "999");
+                Response.Headers.Append("ExitCode", "0");
                 return Ok();
             default:
                 _logger.LogWarning($"Received unknown filename: {filename}, StatusCode: 404, ExitCode: 1");
